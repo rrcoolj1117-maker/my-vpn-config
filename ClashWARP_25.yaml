@@ -1,0 +1,35 @@
+msq: &msq
+  type: masque
+  private-key: MHcCAQEEIDb09W13DTqgLFDObo2c3Rjvbs1OjZSffnBC7+99vc2soAoGCCqGSM49AwEHoUQDQgAEO4R3AWsQdOlt2MtbW1zCt00SQ32m1S2pahMBeM8UDfTnmTAFWMDdp+cXME2EbjN5MvGDIGNEuittiHoKD6W0Mg==
+  public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+  ip: 172.16.0.2
+  ipv6: 2606:4700:110:8408:4270:fbac:da77:f188
+  mtu: 1280
+  udp: true
+  remote-dns-resolve: true
+  dns: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]  
+  
+proxies:
+- name: "MASQUE"
+  server: 162.159.198.2
+  port: 443
+  sni: 4pda.to
+  <<: *msq
+- name: "MASQUE h2"
+  server: 162.159.198.2
+  port: 443
+  sni: 4pda.to
+  network: h2
+  <<: *msq
+    
+proxy-groups:
+- name: WARP
+  type: select
+  icon: https://www.vectorlogo.zone/logos/cloudflare/cloudflare-icon.svg
+  proxies:
+    - "MASQUE"
+    - "MASQUE h2"		
+  url: 'http://speed.cloudflare.com/'
+  interval: 300
+rules:
+- MATCH,WARP
