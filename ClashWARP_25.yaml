@@ -1,26 +1,32 @@
-msg: &msg
-  type: masque
-  private-key: MHcCAQEEIDb09wI30TqgLF0Dbo2c38rj8vs10jZ5ffnBC7+99vcz2soAo6CCqGSM49AwEHoUQDQgAE04R3AlusQd01t2MtBwlz1ct0e05Q32m15ZaPhMBEmBDUFntmTAFWM
-  public-key: MFkveWYHKoZIzj9QCAQYIKoZIzj9OAQcDQgAEIaU7MT0jm9NKp8YfGxR6r+/h4mcG75xI8t5w80RA15tv/zCzvDCWRh2t87/kxnP61Ay0lkr7qYwu+ox+k3dr6w==
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:8408:4270:fbac:da77:f188
-  mtu: 1280
-  udp: true
-  remote-dns-resolve: true
-  dns: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
-
 proxies:
   - name: "MASQUE"
+    type: masque
+    private-key: MHcCAQEEIDb09wI30TqgLF0Dbo2c38rj8vs10jZ5ffnBC7+99vcz2soAo6CCqGSM49AwEHoUQDQgAE04R3AlusQd01t2MtBwlz1ct0e05Q32m15ZaPhMBEmBDUFntmTAFWM
+    public-key: MFkveWYHKoZIzj9QCAQYIKoZIzj9OAQcDQgAEIaU7MT0jm9NKp8YfGxR6r+/h4mcG75xI8t5w80RA15tv/zCzvDCWRh2t87/kxnP61Ay0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8408:4270:fbac:da77:f188
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    dns: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
     server: 162.159.198.2
     port: 443
     sni: 4pda.to
-    <<: *msg
+
   - name: "MASQUE h2"
+    type: masque
+    private-key: MHcCAQEEIDb09wI30TqgLF0Dbo2c38rj8vs10jZ5ffnBC7+99vcz2soAo6CCqGSM49AwEHoUQDQgAE04R3AlusQd01t2MtBwlz1ct0e05Q32m15ZaPhMBEmBDUFntmTAFWM
+    public-key: MFkveWYHKoZIzj9QCAQYIKoZIzj9OAQcDQgAEIaU7MT0jm9NKp8YfGxR6r+/h4mcG75xI8t5w80RA15tv/zCzvDCWRh2t87/kxnP61Ay0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8408:4270:fbac:da77:f188
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    dns: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
     server: 162.159.198.2
     port: 443
     sni: 4pda.to
     network: h2
-    <<: *msg
 
 proxy-groups:
   - name: WARP
