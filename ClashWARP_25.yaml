@@ -1,8 +1,8 @@
 proxies:
   - name: "MASQUE"
     type: masque
-    private-key: MHcCAQEEIDb09wI30TqgLF0Dbo2c38rj8vs10jZ5ffnBC7+99vcz2soAo6CCqGSM49AwEHoUQDQgAE04R3AlusQd01t2MtBwlz1ct0e05Q32m15ZaPhMBEmBDUFntmTAFWM
-    public-key: MFkveWYHKoZIzj9QCAQYIKoZIzj9OAQcDQgAEIaU7MT0jm9NKp8YfGxR6r+/h4mcG75xI8t5w80RA15tv/zCzvDCWRh2t87/kxnP61Ay0lkr7qYwu+ox+k3dr6w==
+    private-key: MHcCAQEEIDb09W13DTqgLFDObo2d3Rjvbs1OjZSffnBC7+99vc2soAoGCCqGSM49AWEHoUQDQgAEO4R3AWsQdOIt2MtBW1zCt0oSQ32m1S2pahMBMeM8UDfTnmTAFWMDPdp+cXME2EbjnN5mVGDIGNEuittiHoKD6WOMg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+h4mcG7Sxl8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP61Ay0lkr7qYwu+ox+k3dr6w==
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8408:4270:fbac:da77:f188
     mtu: 1280
@@ -15,8 +15,8 @@ proxies:
 
   - name: "MASQUE h2"
     type: masque
-    private-key: MHcCAQEEIDb09wI30TqgLF0Dbo2c38rj8vs10jZ5ffnBC7+99vcz2soAo6CCqGSM49AwEHoUQDQgAE04R3AlusQd01t2MtBwlz1ct0e05Q32m15ZaPhMBEmBDUFntmTAFWM
-    public-key: MFkveWYHKoZIzj9QCAQYIKoZIzj9OAQcDQgAEIaU7MT0jm9NKp8YfGxR6r+/h4mcG75xI8t5w80RA15tv/zCzvDCWRh2t87/kxnP61Ay0lkr7qYwu+ox+k3dr6w==
+    private-key: MHcCAQEEIDb09W13DTqgLFDObo2d3Rjvbs1OjZSffnBC7+99vc2soAoGCCqGSM49AWEHoUQDQgAEO4R3AWsQdOIt2MtBW1zCt0oSQ32m1S2pahMBMeM8UDfTnmTAFWMDPdp+cXME2EbjnN5mVGDIGNEuittiHoKD6WOMg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+h4mcG7Sxl8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP61Ay0lkr7qYwu+ox+k3dr6w==
     ip: 172.16.0.2
     ipv6: 2606:4700:110:8408:4270:fbac:da77:f188
     mtu: 1280
